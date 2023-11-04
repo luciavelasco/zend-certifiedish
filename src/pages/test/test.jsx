@@ -87,5 +87,15 @@ export const Test = ({ setPage, setResults }) => {
           }>Next</button>
         }
     </div>
+
+    <div style={{display: `flex`, flexWrap: `wrap`, justifyContent: `center`, marginTop: `0.5rem`}}>
+      {questions.map((v, i) =>
+        <button
+        disabled={i === questionIndex}
+        onClick={() =>
+          setQuestionIndex(i)
+        }>{i + 1}</button>
+        )}
+    </div>
   </>
 }
