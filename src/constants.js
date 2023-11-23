@@ -1,1 +1,1 @@
-export const NUMBER_OF_QUESTIONS = 20
+export const NUMBER_OF_QUESTIONS = 40

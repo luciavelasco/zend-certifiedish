@@ -11,7 +11,7 @@ export const Start = ({ setPage }) => {
       <a href="https://php.net" target="_blank">
         <img src={phpLogo} className="logo" alt="PHP logo" />
       </a>
-      <a href="https://react.dev" target="_blank">
+      <a href="https://www.zend-zce.com" target="_blank">
         <img src={zceLogo} className="logo react" alt="Zend Certified PHP Engineer logo" />
       </a>
     </div>
