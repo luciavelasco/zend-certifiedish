@@ -7,35 +7,46 @@ export const Start = ({ setPage }) => {
 
   return <>
 
+    <h1 style={{display: `none`}}>Hey! Don't look in my code! It's messy! ...while I've got you though, you are pretty great.</h1>
+
     <main style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
-    <div>
-      <a href="https://php.net" target="_blank">
-        <img src={phpLogo} className="logo" alt="PHP logo" />
-      </a>
-      <a href="https://www.zend-zce.com" target="_blank">
-        <img src={zceLogo} className="logo react" alt="Zend Certified PHP Engineer logo" />
-      </a>
-    </div>
+      <div>
+        <a href="https://php.net" target="_blank">
+          <img src={phpLogo} className="logo" alt="PHP logo"/>
+        </a>
+        <a href="https://www.zend-zce.com" target="_blank">
+          <img src={zceLogo} className="logo react" alt="Zend Certified PHP Engineer logo"/>
+        </a>
+      </div>
       <h1>
-        <span>Zend Certified <span style={{textDecoration: `line-through`, textDecorationStyle: `double`}}>Engineer</span></span>
+        <span>Zend Certified <span
+          style={{ textDecoration: `line-through`, textDecorationStyle: `double` }}>Engineer</span></span>
         {/*<span style={{textDecoration: `line-through`}}>Certified</span>*/}
-        <span style={{transform: `rotate(-45deg)`, display: `inline-block`, position: `absolute`}}> Fiancee </span>
+        <span style={{ transform: `rotate(-45deg)`, display: `inline-block`, position: `absolute` }}> Fiancee </span>
       </h1>
 
-    <button onClick={() => setPage(`test`)}>START</button>
 
-    {/*<p className="subtitle">*/}
-    {/*  This ZCE-style test will challenge your PHP knowledge. Answer {NUMBER_OF_QUESTIONS} questions in {NUMBER_OF_QUESTIONS} minutes.*/}
-    {/*</p>*/}
-    <p className="subtitle">
-      Hello adventurer! I challenge your PHP knowledge, as well as some lore that's closer to home.
-      You may call on the aid of your acolytes and apprentices, if you wish.
-      Answer {NUMBER_OF_QUESTIONS} questions by the deadline.
-    </p>
+      {/*<p className="subtitle">*/}
+      {/*  This ZCE-style test will challenge your PHP knowledge. Answer {NUMBER_OF_QUESTIONS} questions in {NUMBER_OF_QUESTIONS} minutes.*/}
+      {/*</p>*/}
+      <p className="subtitle">
+        Hello adventurer!
+      </p>
+      <p className="subtitle">
+        I challenge your PHP knowledge, as well as some lore that's closer to home.
+        You may call on the aid of your acolytes and apprentices, if you wish.
+        Answer {NUMBER_OF_QUESTIONS} questions by the deadline.
+        <br/>
+        <br/>
+        <br/>
+      </p>
+
+      <button onClick={() => setPage(`test`)}>START</button>
+
       <Timer/>
     </main>
-  </>
-}
+  </>;
+};
 
 
 /*
