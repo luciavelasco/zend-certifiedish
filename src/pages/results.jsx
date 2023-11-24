@@ -37,6 +37,9 @@ export const Results = ({ answers, setPage }) => {
       Get thee hence, 'fore the clock strikes half hour! <br/>
       'Tis there you'll get robes of +1 power...
     </p>
+    <p  style={{fontSize: `0.75rem`}}>
+      P.S. you won't be coming back to the office today, but you can pick your stuff up tomorrow!
+    </p>
 
     <h2> {score} / {NUMBER_OF_QUESTIONS} answered correctly.</h2>
     <p>You answered {NUMBER_OF_QUESTIONS - unanswered} of {NUMBER_OF_QUESTIONS} questions.</p>
