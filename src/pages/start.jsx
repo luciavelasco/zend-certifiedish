@@ -1,5 +1,6 @@
 import phpLogo from "../assets/new-php-logo.svg";
 import zceLogo from "../assets/zce-php-engineer-logo-l.jpg";
+import mysteriousRing from "../assets/The-Romantic-Mens-Wedding-Rings-Manly-Bands.webp";
 import { NUMBER_OF_QUESTIONS } from "../constants";
 import { Timer } from "./times";
 
@@ -10,10 +11,14 @@ export const Start = ({ setPage }) => {
     <h1 style={{display: `none`}}>Hey! Don't look in my code! It's messy! ...while I've got you though, you are pretty great.</h1>
 
     <main style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
-      <div>
+      <div style={{display: `flex`, alignItems: `center`}}>
         <a href="https://php.net" target="_blank">
           <img src={phpLogo} className="logo" alt="PHP logo"/>
         </a>
+        <img
+          style={{ height: `14rem`, filter: `brightness(0.1)` }}
+          src={mysteriousRing}
+          className="logo" alt="A mysterious ring immersed in shadow"/>
         <a href="https://www.zend-zce.com" target="_blank">
           <img src={zceLogo} className="logo react" alt="Zend Certified PHP Engineer logo"/>
         </a>
@@ -33,17 +38,19 @@ export const Start = ({ setPage }) => {
         Hello adventurer!
       </p>
       <p className="subtitle">
-        I challenge your PHP knowledge, as well as some lore that's closer to home.
+        I challenge your PHP knowledge, as well as some lore that's closer to home.<br/>
         You may call on the aid of your acolytes and apprentices, if you wish.
+      </p>
+      <p className="subtitle">
         Answer {NUMBER_OF_QUESTIONS} questions by the deadline.
-        <br/>
-        <br/>
         <br/>
       </p>
 
       <button onClick={() => setPage(`test`)}>START</button>
 
       <Timer/>
+
+      <p>Oh and don't refresh, I did not add localstorage or anything lol xoxo</p>
     </main>
   </>;
 };
