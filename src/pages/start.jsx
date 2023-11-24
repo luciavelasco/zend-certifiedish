@@ -50,7 +50,7 @@ export const Start = ({ setPage }) => {
 
       <Timer/>
 
-      <p>Oh and don't refresh, I did not add localstorage or anything lol xoxo</p>
+      <p>Oh and don't refresh, I did not add localstorage or anything xoxo</p>
     </main>
   </>;
 };
