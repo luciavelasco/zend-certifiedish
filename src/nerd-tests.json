@@ -1,0 +1,232 @@
+[
+  [
+    "LOTR: Who of the following is not a wizard?",
+    "Denethor",
+    "Radagast",
+    "Gandalf",
+    "Saruman"
+  ],
+  [
+    "LOTR: While in Mordor, Frodo and Sam ate:",
+    "Elvish lembas bread",
+    "The athelas plant",
+    "Stewed rabbit",
+    "Nothing"
+  ],
+  [
+    "LOTR: When did Samwise leave Frodos side?",
+    "After he was poisoned by Shelob",
+    "Never",
+    "On the Stairs of Cirith Ungol",
+    "On the slopes of Mount Doom"
+  ],
+  [
+    "LOTR: Who is Sauron?",
+    "One of the Maiar",
+    "One of the Valar",
+    "One of the Noldor",
+    "A balrog of Morgoth"
+  ],
+  [
+    "LOTR: What is the Elvish word for 'friend'?",
+    "Mellon",
+    "Namárieë",
+    "Noro lim",
+    "Mallorn"
+  ],
+  [
+    "LOTR: Which of these is a gift from Galadriel?",
+    "Three strands of golden hair, to Gimli",
+    "The light of Erétrin's star, to Frodo",
+    "Neither",
+    "Both"
+  ],
+  [
+    "Star Wars: True or false: R2-D2 originally had dialogue, with actual speaking parts.",
+    "True",
+    "False"
+  ],
+  [
+    "Star Wars: Variations on what line have made it into every film in the saga?",
+    "I have a bad feeling about this",
+    "There's nothing to see here",
+    "I am one with the Force and the Force is with me",
+    "It's a trap!"
+  ],
+  [
+    "Star Wars: What type of dog was the inspiration for Chewbacca, according to George Lucas?",
+    "Alaskan Malamute",
+    "Newfoundland",
+    "St Bernard",
+    "Samoyed"
+  ],
+  [
+    "Star Wars: Where does Rey find Luke Skywalker?",
+    "Ahch-To",
+    "Tatooine",
+    "Coruscant",
+    "Mandalore"
+  ],
+  [
+    "Star Wars: Who killed Mace Windu?",
+    "Darth Sidious",
+    "Darth Maul",
+    "Darth Vader",
+    "Luke Skywalker"
+  ],
+  [
+    "Star Wars: What is the name of Anakin's stepbrother?",
+    "Owen Lars",
+    "Owen Skywalker",
+    "Lars Owen",
+    "Lars Skywalker"
+  ],
+  [
+    "5e: Which of these statements is correct?",
+    "All these statements are true",
+    "The Dwarven pantheon resides in Arcadia",
+    "The Gnomish pantheon resides in Bytopia",
+    "The Elven pantheon resides in Arborea",
+    "The Goblin pantheon resides in- Acheron",
+    "None of these statements are true"
+  ],
+  [
+    "5e: What events caused the most recent Spellplague?",
+    "Cyric assassinated Mystra (on Shar's orders)",
+    "Mystra assassinated Cyric (on Shar's orders)",
+    "Shar assassinated Mystra (on Cyric's orders)",
+    "Mystra assassinated Shar (on Cyric's orders)"
+  ],
+  [
+    "5e: Which of these is NOT a layer of the Nine Hells?",
+    "Carceri",
+    "Avernus",
+    "Dis",
+    "Minauros",
+    "Phlegethos",
+    "Stygia",
+    "Malbolge",
+    "Maladomini",
+    "Cania",
+    "Nessus"
+  ],
+  [
+    "5e: What chaotic plane permits residents to move objects with their mind?",
+    "Limbo",
+    "Pandemonium",
+    "The Abyss",
+    "Carceri"
+  ],
+  [
+    "5e: All devils are immune to what forms of damage?",
+    "Fire and poison",
+    "Cold and poison",
+    "Bludgeoning",
+    "Psychic and necrotic"
+  ],
+  [
+    "5e: Who developed spells that allow you to have a faithful hound, a private sanctum, a sword, and a magnificent mansion?",
+    "Mordenkainen",
+    "Tasha",
+    "Otto",
+    "Leomund",
+    "Tenser"
+  ],
+  [
+    "5e: Which wizard does NOT have a spell named after them in 5e?",
+    "Alassra",
+    "Mordenkainen",
+    "Tasha",
+    "Otiluke",
+    "Rary",
+    "Otto",
+    "Drawmij",
+    "Leomund",
+    "Tenser",
+    "Bigby"
+  ],
+  [
+    "5e: What magical school does counterspell fall under?",
+    "Abjuration",
+    "Conjuration",
+    "Evocation",
+    "Enchantment"
+  ],
+  [
+    "Witcher: Last time we saw a Witcher scene, which sorceress was Geralt with?",
+    "Keira Metz",
+    "Triss Merigold",
+    "Yennefer of Vengerberg",
+    "Philippa Eilhart"
+  ],
+  [
+    "Witcher: What potion should a witcher use to gradually heal themselves?",
+    "Swallow",
+    "White Honey",
+    "Golden Oriole",
+    "Cat"
+  ],
+  [
+    "Witcher: What sign should a witcher cast when fighting with a spirit?",
+    "Yrden",
+    "Igni",
+    "Axii",
+    "Aard"
+  ],
+  [
+    "Witcher: Who is the king of the Wild Hunt?",
+    "Eredin",
+    "Imlerith",
+    "Avallac'h",
+    "Iowerth"
+  ],
+  [
+    "Witcher: What animal is Geralt of Rivia's horse named after?",
+    "A bug",
+    "A fish",
+    "A wolf",
+    "A monster"
+  ],
+  [
+    "Witcher: In Hearts of Stone what has the Ofieri prince transformed into?",
+    "Giant Toad",
+    "An Arch Griffin",
+    "A Leshen",
+    "A Pestos"
+  ],
+  [
+    "Witcher: What bomb should a witcher throw to blind an opponent?",
+    "Samum",
+    "Dancing Star",
+    "Devil's Puffball",
+    "Grapeshot"
+  ],
+  [
+    "Witcher: What Sword is given to Geralt of Rivia during Blood and Wine by the Lady of the Lake?",
+    "Aerondight",
+    "Zireael",
+    "Bloodsword",
+    "Azure Wrath"
+  ],
+  [
+    "Witcher: What is the name of the hardest difficulty mode in the Witcher 3?",
+    "Death March",
+    "Nightmare",
+    "Legendary",
+    "Insane"
+  ],
+  [
+    "Witcher: Which Witcher school did Geralt of Rivia train at?",
+    "School of the Wolf",
+    "School of the Cat",
+    "School of the Bear",
+    "School of the Viper"
+  ],
+  [
+    "Witcher: What is another more sinister name Gearalt of Rivia is known as?",
+    "The Butcher of Blaviken",
+    "The Monster of Novigrad",
+    "The Stalker of Velen",
+    "The Beast of Toussaint"
+  ]
+]

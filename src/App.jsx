@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './App.css';
 import { Results, Start, Test } from "./pages";
+import { Timer } from "./pages/times";
 
 /*
 Login

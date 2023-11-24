@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { NUMBER_OF_QUESTIONS } from "../../constants";
-import personalQuestions from '../../lucia-and-nerd-tests.json';
+import personalQuestions from '../../lucia-tests.json';
+import nerdQuestions from '../../nerd-tests.json';
+import phpQuestions from '../../php-tests.json';
+import { Timer } from "../times";
 // import questionData from '../../../sample-questions.json';
-import questionData from '../../raw-tests.json';
 import { Question } from "./question";
 
 
@@ -20,20 +22,30 @@ import { Question } from "./question";
     )
  */
 
-export const Test = ({ setPage, setResults }) => {
-  const [ questionIndex, setQuestionIndex ] = useState(0);
-  const [ questions ] = useState([
-      ...personalQuestions
-        .map(value => ({ value, sort: Math.random() }))
-        .sort((a, b) => a.sort - b.sort),
-      ...(NUMBER_OF_QUESTIONS > personalQuestions.length
-        ? Object.values(questionData)
-          .map(value => ({ value, sort: Math.random() }))
-          .sort((a, b) => a.sort - b.sort)
-          .slice(0, NUMBER_OF_QUESTIONS - personalQuestions.length)
-        : []),
-    ].sort((a, b) => a.sort - b.sort)
-      .map(({ value }) => [
+const toSortable = type => value => ({ value, sort: Math.random(), type });
+const shuffleAndSlice = (questions, type, slice) =>
+  slice > 0
+    ? questions
+      .map(toSortable(type))
+      .sort((a, b) => a.sort - b.sort)
+      .slice(0, slice)
+      .map(question => ({ ...question, sort: Math.random() }))
+    : [];
+
+
+const PERSONAL_QUESTIONS = personalQuestions.length > NUMBER_OF_QUESTIONS ? NUMBER_OF_QUESTIONS : personalQuestions.length
+const NERD_QUOTA = (NUMBER_OF_QUESTIONS - PERSONAL_QUESTIONS) / 2
+const NERD_QUESTIONS = nerdQuestions.length > NERD_QUOTA ? NERD_QUOTA : nerdQuestions.length
+const PHP_QUESTIONS = NUMBER_OF_QUESTIONS - (PERSONAL_QUESTIONS + NERD_QUESTIONS)
+
+const makeQuestions = () =>
+  [
+    ...personalQuestions.map(toSortable(`personal`)).slice(0, PERSONAL_QUESTIONS),
+    ...shuffleAndSlice(nerdQuestions, `nerd`, Math.ceil(NERD_QUESTIONS)),
+    ...shuffleAndSlice(phpQuestions, `php`, Math.floor(PHP_QUESTIONS)),
+  ]
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => [
       value[0],
       ...value
         .slice(1)
@@ -46,18 +58,28 @@ export const Test = ({ setPage, setResults }) => {
               [ v, ...acc ],
           [],
         ),
-    ]),
-  );
+    ]);
+
+export const Test = ({ setPage, setResults }) => {
+  const [ questionIndex, setQuestionIndex ] = useState(0);
+  const questions = useMemo(() => makeQuestions(), []);
 
   const [ answers, setAnswers ] = useState(new Array(NUMBER_OF_QUESTIONS));
 
+  const submit = () => {
+    setResults(questions.map((question, i) =>
+      [
+        question[question.length - 1],
+        answers[i],
+        question[0],
+        question[question[question.length - 1] + 1],
+        question[Number.parseInt(answers[i]) + 1],
+      ]
+    ));
+    setPage(`results`);
+  }
   const SubmitButton = () => <button
-    onClick={() => {
-      setResults(questions.map((questionData, i) =>
-        [ questionData.pop(), answers[i] ],
-      ));
-      setPage(`results`);
-    }}>Submit</button>;
+    onClick={submit}>Submit</button>;
 
 
   /*
@@ -65,6 +87,8 @@ export const Test = ({ setPage, setResults }) => {
    */
 
   return <>
+    <Timer submit={submit}/>
+
     <p>Question {questionIndex + 1} of {NUMBER_OF_QUESTIONS}</p>
     <button
       onClick={() =>
@@ -101,6 +125,7 @@ export const Test = ({ setPage, setResults }) => {
     <div style={{ display: `flex`, flexWrap: `wrap`, justifyContent: `center`, marginTop: `0.5rem` }}>
       {questions.map((v, i) =>
         <button
+          key={i}
           disabled={i === questionIndex}
           onClick={() =>
             setQuestionIndex(i)

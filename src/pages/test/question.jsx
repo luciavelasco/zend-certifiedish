@@ -26,7 +26,9 @@ export const Question = ({ data, setAnswer, answer }) => {
               setSelected(i)
               setAnswer(i);
             }}
-          >{[`A`, `B`, `C`, `D`][i]}) {v}</button>)
+          >{[`A`, `B`, `C`, `D`, `E`,`F`,`G`,`H`,`I`,`J`,`K`,`L`,`M`,`N`,`O`,`P`,`Q`,`R`,`S`,`T`,`U`,`V`,`W`,`X`,`Y`,`Z`][i]})
+            {v.indexOf(`\`\`\``) !== -1 ? <Markdown>{v}</Markdown> : ` ${v}`}
+          </button>)
       }
   </section>
 }
