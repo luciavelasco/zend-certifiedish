@@ -27,6 +27,7 @@ export const Start = ({ setPage }) => {
           style={{ textDecoration: `line-through`, textDecorationStyle: `double` }}>Engineer</span></span>
         <span style={{ transform: `rotate(-45deg)`, display: `inline-block`, position: `absolute` }}> Fiancee </span>
       </h1>
+      <p style={{ fontSize: `0.7rem` }}>(now with 100% less PHP)</p>
 
       <p className="subtitle">
         Hello Mike!
