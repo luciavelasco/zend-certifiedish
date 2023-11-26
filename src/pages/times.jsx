@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 const getSecondsUntilCrunchTime = () => {
-  const crunchTime = new Date('2023-11-24T13:05:00');
-  // const crunchTime = new Date('2023-11-24T01:25:00');
+  const crunchTime = new Date('2023-11-24T13:05:00'); // ACTUAL
+  // const crunchTime = new Date('2023-11-24T01:25:00'); // TEST
   const now = new Date()
   return crunchTime - now;
 }

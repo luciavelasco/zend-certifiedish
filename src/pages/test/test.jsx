@@ -1,10 +1,6 @@
-import { useEffect, useMemo, useState } from 'react';
-import { NUMBER_OF_QUESTIONS } from "../../constants";
+import { useMemo, useState } from 'react';
 import personalQuestions from '../../lucia-tests.json';
 import nerdQuestions from '../../nerd-tests.json';
-import phpQuestions from '../../php-tests.json';
-import { Timer } from "../times";
-// import questionData from '../../../sample-questions.json';
 import { Question } from "./question";
 
 
@@ -33,16 +29,12 @@ const shuffleAndSlice = (questions, type, slice) =>
     : [];
 
 
-const PERSONAL_QUESTIONS = personalQuestions.length > NUMBER_OF_QUESTIONS ? NUMBER_OF_QUESTIONS : personalQuestions.length
-const NERD_QUOTA = (NUMBER_OF_QUESTIONS - PERSONAL_QUESTIONS) / 2
-const NERD_QUESTIONS = nerdQuestions.length > NERD_QUOTA ? NERD_QUOTA : nerdQuestions.length
-const PHP_QUESTIONS = NUMBER_OF_QUESTIONS - (PERSONAL_QUESTIONS + NERD_QUESTIONS)
+const NUMBER_OF_QUESTIONS = personalQuestions.length + nerdQuestions.length
 
 const makeQuestions = () =>
   [
-    ...personalQuestions.map(toSortable(`personal`)).slice(0, PERSONAL_QUESTIONS),
-    ...shuffleAndSlice(nerdQuestions, `nerd`, Math.ceil(NERD_QUESTIONS)),
-    ...shuffleAndSlice(phpQuestions, `php`, Math.floor(PHP_QUESTIONS)),
+    ...personalQuestions.map(toSortable(`personal`)),
+    ...nerdQuestions.map(toSortable(`nerd`))
   ]
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => [
@@ -87,7 +79,7 @@ export const Test = ({ setPage, setResults }) => {
    */
 
   return <>
-    <Timer submit={submit}/>
+    {/*<Timer submit={submit}/>*/}
 
     <p>Question {questionIndex + 1} of {NUMBER_OF_QUESTIONS}</p>
     <button

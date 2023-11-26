@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Markdown from 'react-markdown';
-import { NUMBER_OF_QUESTIONS } from "../constants";
 
 export const Results = ({ answers, setPage }) => {
 
@@ -9,8 +8,8 @@ export const Results = ({ answers, setPage }) => {
 
   const score = answers.filter(([ correctAnswer, answerGiven ]) => correctAnswer === answerGiven).length;
   const unanswered = answers.filter(([ , answerGiven ]) => answerGiven === undefined).length;
-  // console.log({answers, score})
-  const passed = score / NUMBER_OF_QUESTIONS > 0.7;
+
+  const passed = score / answers.length > 0.7;
 
   return <>
     <h1>{passed ? `You Passed` : `You did not pass.`}</h1>
@@ -28,23 +27,22 @@ export const Results = ({ answers, setPage }) => {
         </p>
     }
 
-    <p style={{fontStyle: `italic`}}>
+    <p style={{ fontStyle: `italic` }}>
       Riddle me this, riddle me that, <br/>
       Who went to sea with the pussy cat? <br/>
       Finely dressed, swift and dapper, <br/>
       This feathery mascot is quite the flapper. <br/>
-      {/*This location is known for it's mascot (a flapper). <br/>*/}
       Get thee hence, 'fore the clock strikes half hour! <br/>
       'Tis there you'll get robes of +1 power...
     </p>
-    <p  style={{fontSize: `0.75rem`}}>
-      P.S. you won't be coming back to the office today, but you can pick your stuff up tomorrow!
+    <p style={{ fontSize: `0.75rem` }}>
+      P.S. this clue has expired, but you can still try to work it out!
     </p>
 
-    <h2> {score} / {NUMBER_OF_QUESTIONS} answered correctly.</h2>
-    <p>You answered {NUMBER_OF_QUESTIONS - unanswered} of {NUMBER_OF_QUESTIONS} questions.</p>
+    <h2> {score} / {answers.length} answered correctly.</h2>
+    <p>You answered {answers.length - unanswered} of {answers.length} questions.</p>
 
-    {/*<button onClick={() => setPage(`start`)}>Try again</button>*/}
+    <button onClick={() => setPage(`start`)}>Try again</button>
 
     <button onClick={() => setShowClue(!showClue)}>{showClue ? `Hide` : `Reveal`} Emergency Clue</button>
     <button onClick={() => setShowAnswers(!showAnswers)}>{showAnswers ? `Hide` : `Reveal`} Answers</button>
