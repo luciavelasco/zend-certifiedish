@@ -19,15 +19,6 @@ import { Question } from "./question";
  */
 
 const toSortable = type => value => ({ value, sort: Math.random(), type });
-const shuffleAndSlice = (questions, type, slice) =>
-  slice > 0
-    ? questions
-      .map(toSortable(type))
-      .sort((a, b) => a.sort - b.sort)
-      .slice(0, slice)
-      .map(question => ({ ...question, sort: Math.random() }))
-    : [];
-
 
 const NUMBER_OF_QUESTIONS = personalQuestions.length + nerdQuestions.length
 
@@ -79,7 +70,6 @@ export const Test = ({ setPage, setResults }) => {
    */
 
   return <>
-    {/*<Timer submit={submit}/>*/}
 
     <p>Question {questionIndex + 1} of {NUMBER_OF_QUESTIONS}</p>
     <button
@@ -87,7 +77,6 @@ export const Test = ({ setPage, setResults }) => {
         setPage(`start`)
       }>Quit
     </button>
-    {/*<button onClick={() => {}}>Review your progress</button>*/}
     <SubmitButton/>
 
     <Question
